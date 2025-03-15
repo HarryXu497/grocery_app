@@ -1,4 +1,4 @@
-package com.example.groceryapp.state.items;
+package com.example.groceryapp.state.items
 
 data class ItemModel(
     val category: String,

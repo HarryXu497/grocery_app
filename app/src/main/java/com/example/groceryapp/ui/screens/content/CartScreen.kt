@@ -1,8 +1,6 @@
 package com.example.groceryapp.ui.screens.content
 
-import android.util.Log
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -15,19 +13,18 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.groceryapp.state.auth.AuthViewModel
-import com.example.groceryapp.state.cart.CartItemsViewModel
-import com.example.groceryapp.ui.composables.ContentScreenAppBar
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
-import com.example.groceryapp.state.items.ItemWithIdModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.groceryapp.state.auth.AuthViewModel
+import com.example.groceryapp.state.cart.CartItemsViewModel
 import com.example.groceryapp.ui.composables.CartItemList
+import com.example.groceryapp.ui.composables.ContentScreenAppBar
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

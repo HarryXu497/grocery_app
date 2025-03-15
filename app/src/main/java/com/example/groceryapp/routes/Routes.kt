@@ -2,36 +2,30 @@ package com.example.groceryapp.routes
 
 import kotlinx.serialization.Serializable
 
-sealed class Route {
-    fun toRouteString(): String {
-        return this::class.qualifiedName.toString()
-    }
-}
-
-data object Routes: Route() {
+data object Routes {
     @Serializable
-    data object Auth: Route() {
+    data object Auth {
         @Serializable
-        data object SignIn: Route()
+        data object SignIn
 
         @Serializable
-        data object Register: Route()
+        data object Register
     }
     @Serializable
-    data object Content: Route() {
+    data object Content {
         @Serializable
-        data object Browse: Route()
+        data object Browse
 
         @Serializable
-        data class Item(val id: String): Route()
+        data class Item(val id: String)
 
         @Serializable
-        data object Search: Route()
+        data object Search
 
         @Serializable
-        data object Cart: Route()
+        data object Cart
 
         @Serializable
-        data object Profile: Route()
+        data object Profile
     }
 }
